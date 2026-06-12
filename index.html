@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>15 Qualified Leads in 30 Days | Immigration Law Firms</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #B8860B;
+      --gold-light: #C9A84C;
+      --gold-border: rgba(184,134,11,0.22);
+      --bg: #ffffff;
+      --bg-2: #f9f7f4;
+      --bg-3: #f2efe9;
+      --text: #0F172A;
+      --muted: #5a5a52;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 20px;
+      opacity: 0.7;
+    }
+
+    .hl {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    /* ══ SECTION 1 — HEADLINE ══ */
+    #headline {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 100px 28px 80px;
+      position: relative;
+      overflow: hidden;
+      background: var(--bg);
+    }
+
+    #headline::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0; right: 0;
+      height: 80px;
+      background: linear-gradient(to bottom, transparent, var(--bg-2));
+      pointer-events: none;
+    }
+
+    .glow-orb {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(184,134,11,0.06) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.2s forwards;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      max-width: 680px;
+      margin-bottom: 28px;
+      color: var(--text);
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.4s forwards;
+    }
+
+    h1 em { font-style: italic; color: var(--gold-light); }
+
+    .subhead {
+      font-size: clamp(1rem, 2.2vw, 1.15rem);
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 48px;
+      font-weight: 300;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.6s forwards;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 20px 52px;
+      background: var(--gold);
+      color: #ffffff;
+      font-family: var(--sans);
+      font-size: 0.92rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.8s forwards;
+    }
+
+    .cta-btn:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(184,134,11,0.2);
+    }
+
+    /* ══ SECTION 2 — WHAT I DO ══ */
+    #what-i-do {
+      padding: 70px 0;
+      background: var(--bg-2);
+    }
+
+    #what-i-do .wrap { text-align: center; }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    h2 em { font-style: italic; color: var(--gold-light); }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .body-text {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 650px;
+      margin: 0 auto 12px;
+      line-height: 1.6;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1px;
+      margin-top: 56px;
+      border: 1px solid var(--gold-border);
+      background: var(--gold-border);
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 36px 28px;
+      text-align: left;
+      transition: background 0.25s ease;
+    }
+
+    .card:hover { background: #fdf9f2; }
+
+    .card-num {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      color: var(--gold);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 10px;
+      line-height: 1;
+    }
+
+    .card-title {
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ══ SECTION 3 — WHO IT'S FOR ══ */
+    #who-its-for {
+      padding: 80px 0;
+      background: var(--bg);
+    }
+
+    #who-its-for .wrap { text-align: center; }
+
+    .for-list {
+      list-style: none;
+      margin: 48px auto 0;
+      max-width: 620px;
+      text-align: left;
+    }
+
+    .for-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      font-size: 1rem;
+      color: var(--text);
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .for-list li:last-child { border-bottom: none; }
+
+    .check { flex-shrink: 0; margin-top: 3px; }
+    .check::before {
+      content: '✓';
+      color: var(--gold);
+      font-size: 16px;
+    }
+
+    /* ══ SECTION 4 — PROOF ══ */
+    #proof {
+      padding: 80px 0;
+      background: var(--bg-2);
+    }
+
+    #proof .wrap { text-align: center; }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 56px;
+    }
+
+    .testi {
+      background: #ffffff;
+      border: 1px solid var(--gold-border);
+      padding: 36px 32px;
+      text-align: left;
+      position: relative;
+      transition: border-color 0.25s ease;
+    }
+
+    .testi:hover { border-color: rgba(184,134,11,0.45); }
+
+    .testi::before {
+      content: '\201C';
+      position: absolute;
+      top: 16px;
+      left: 28px;
+      font-family: var(--serif);
+      font-size: 4rem;
+      color: var(--gold);
+      opacity: 0.25;
+      line-height: 1;
+    }
+
+    .testi-text {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.8;
+      margin-top: 20px;
+      margin-bottom: 24px;
+      font-weight: 300;
+    }
+
+    .testi-author {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .testi-role {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .guarantee-box {
+      margin-top: 56px;
+      border: 1px solid var(--gold-border);
+      padding: 44px 40px;
+      background: #ffffff;
+      text-align: left;
+    }
+
+    .guarantee-box .g-label {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .guarantee-box h3 {
+      font-family: var(--serif);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 600;
+      margin-bottom: 16px;
+      line-height: 1.25;
+      color: var(--text);
+    }
+
+    .guarantee-box h3 em { font-style: italic; color: var(--gold-light); }
+
+    .guarantee-box p {
+      font-size: 0.97rem;
+      color: var(--muted);
+      line-height: 1.85;
+      max-width: 560px;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+      border: 1px solid var(--gold-border);
+      background: #ffffff;
+    }
+
+    .stat {
+      flex: 1;
+      padding: 36px 20px;
+      text-align: center;
+      border-right: 1px solid var(--gold-border);
+    }
+
+    .stat:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    /* ══ SECTION 5 — CTA ══ */
+    #cta {
+      padding: 70px 0;
+      background: var(--bg);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #cta::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(184,134,11,0.05) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    #cta h2 { margin-bottom: 16px; font-size: clamp(2rem, 5vw, 3.2rem); }
+    #cta .body-text { margin-bottom: 48px; }
+
+    .fine-print {
+      margin-top: 20px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .cards { grid-template-columns: 1fr; }
+      .testimonials { grid-template-columns: 1fr; }
+      .stat-row { flex-direction: column; }
+      .stat { border-right: none; border-bottom: 1px solid var(--gold-border); }
+      .stat:last-child { border-bottom: none; }
+      .cta-btn { width: 100%; text-align: center; }
+      .guarantee-box { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECTION 1: HEADLINE -->
+  <section id="headline">
+    <div class="glow-orb"></div>
+    <p class="eyebrow">Immigration Law Firms · USA</p>
+    <h1>More Consultations. <em>Zero Leads Lost.</em> Guaranteed.</h1>
+    <p class="subhead">We help U.S. immigration law firms turn more inquiries into booked consultations through targeted client acquisition campaigns and automated follow-up that contacts every lead within <span class="hl">60 seconds</span>.</p>
+    <a href="https://calendly.com/abubakar-growthpartners/30min" target="_blank" class="cta-btn">Schedule Your Free Growth Assessment</a>
+  </section>
+
+  <!-- SECTION 2: WHAT WE DO -->
+  <section id="what-i-do">
+    <div class="wrap">
+      <span class="section-label reveal">How It Works</span>
+      <div class="divider"></div>
+      <h2 class="reveal">How We Help <em>Immigration Law Firms Grow</em></h2>
+      <p class="body-text reveal">We build <span class="hl">targeted Meta Ads campaigns</span> around your firm's own case outcomes and real client stories, then pair them with a fully automated system that contacts every new lead within <span class="hl">60 seconds</span>. No leads slip through. No manual chasing. Just <span class="hl">qualified prospects booked directly into your calendar</span>.</p>
+
+      
+<div class="cards">
+<div class="card reveal">
+<span class="card-num">01</span>
+<p class="card-title">Attract Qualified Immigration Prospects</p>
+<p class="card-desc">Reach people actively seeking immigration legal help in your target market.</p>
+</div>
+
+<div class="card reveal">
+<span class="card-num">02</span>
+<p class="card-title">Engage Every Lead Immediately</p>
+<p class="card-desc">Every inquiry receives a response within 60 seconds, preventing opportunities from slipping away.</p>
+</div>
+
+<div class="card reveal">
+<span class="card-num">03</span>
+<p class="card-title">Turn Inquiries Into Consultations</p>
+<p class="card-desc">Qualified prospects are guided toward booking consultations with your firm.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+  
+  
+<section id="founder-positioning" style="padding:60px 0;background:#f8f9fa;">
+<div class="wrap" style="text-align:center;">
+<span class="section-label reveal">Why Us</span>
+<div class="divider"></div>
+<h2 class="reveal">Focused Exclusively On <em>Immigration Law Firms</em></h2>
+<p class="body-text reveal">
+We focus on helping U.S. immigration law firms improve lead response, consultation booking,
+and client acquisition systems.
+</p>
+<p class="body-text reveal">
+Rather than serving every industry, we focus on understanding the unique challenges immigration firms face when converting inquiries into retained clients.
+</p>
+</div>
+</section>
+
+<!-- SECTION 3: WHO IT'S FOR -->
+  <section id="who-its-for">
+    <div class="wrap">
+      <span class="section-label reveal">Who This Is For</span>
+      <div class="divider"></div>
+      <h2 class="reveal">Built for <em>Growth-Focused Immigration Law Firms</em></h2>
+      <p class="body-text reveal">This system is designed for <span class="hl">growth-focused immigration law firms</span> that want a predictable flow of qualified consultations and have the capacity to take on additional clients.</p>
+
+      <ul class="for-list">
+        <li class="reveal"><span class="check"></span>You handle <span class="hl">visa applications, green card cases, and citizenship matters</span> and you are tired of paying for leads that <span class="hl">never convert</span> into consultations.</li>
+        <li class="reveal"><span class="check"></span>Leads come in and sit unanswered for hours. By the time someone follows up, the prospect has <span class="hl">already contacted three other firms</span>.</li>
+        <li class="reveal"><span class="check"></span>You have worked with marketing agencies before who promised traffic and leads but delivered <span class="hl">neither qualified prospects nor a system</span> to convert them.</li>
+        <li class="reveal"><span class="check"></span>You are willing to invest a minimum of <span class="hl">$1,000 to $1,500 per month</span> in Meta ad spend to generate a <span class="hl">predictable flow</span> of qualified consultations.</li>
+        <li class="reveal"><span class="check"></span>You are ready to share your <span class="hl">case outcomes and client success stories</span>, because that is exactly what makes your ads <span class="hl">convert where others fail</span>.</li>
+      </ul>
+    </div>
+  </section>
+
+  
+<!-- SECTION 4: PROOF -->
+  <section id="proof">
+    <div class="wrap">
+      <span class="section-label reveal">The Numbers</span>
+      <div class="divider"></div>
+      <h2 class="reveal">Why Faster Follow-Up <em>Matters</em></h2>
+      <p class="body-text reveal">Here is what the math looks like when the system is working and what happens if it does not.</p>
+
+      
+<div class="testimonials">
+<div class="testi reveal">
+<p class="testi-text">
+Most immigration prospects contact multiple law firms before choosing who to trust. When follow-up is delayed, consultation opportunities are often lost to competing firms.
+</p>
+<p class="testi-author">The Challenge</p>
+<p class="testi-role">Speed matters</p>
+</div>
+
+<div class="testi reveal">
+<p class="testi-text">
+Our goal is simple: help your firm respond faster, engage more qualified prospects, and create more consultation conversations.
+</p>
+<p class="testi-author">The Goal</p>
+<p class="testi-role">More consultations</p>
+</div>
+</div>
+
+<div class="guarantee-box reveal"
+ style="margin-bottom:24px;">
+        <span class="g-label">Qualified Lead Definition</span>
+        <h3>What Counts As A <em>Qualified Lead</em></h3>
+        <p>✓ Has an active immigration matter<br>
+        ✓ Completes the intake form<br>
+        ✓ Provides valid contact information<br>
+        ✓ Responds to follow-up communication<br>
+        ✓ Requests or demonstrates intent to book a consultation</p>
+      </div>
+
+<div class="guarantee-box reveal">
+        <span class="g-label">Our Guarantee</span>
+        <h3>Deliver in 30 Days <em>or We Work for Free</em></h3>
+        <p>Your complete automation system will be <span class="hl">fully built and live within 14 days</span> of onboarding. If we do not deliver <span class="hl">15 qualified consultation-ready leads</span> in your first 30 days, we work the entire second month <span class="hl">completely free</span> until we do. <span class="hl">You carry zero risk. We carry all of it.</span></p>
+      </div>
+
+      <div class="stat-row reveal">
+        <div class="stat">
+          <span class="stat-num">15</span>
+          <span class="stat-label">Qualified Leads / Month</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">60s</span>
+          <span class="stat-label">Automated Response Time</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">14</span>
+          <span class="stat-label">Days to Go Live</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">$1k+</span>
+          <span class="stat-label">Recommended Monthly Ad Budget</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<section id="call-review" style="padding:80px 0;background:#f9f7f4;">
+<div class="wrap" style="text-align:center;">
+<span class="section-label reveal">Growth Assessment</span>
+<div class="divider"></div>
+<h2 class="reveal">What Happens During The <em>Call</em></h2>
+<p class="body-text reveal">✓ Review your current lead response process</p>
+<p class="body-text reveal">✓ Identify where consultation opportunities may be getting lost</p>
+<p class="body-text reveal">✓ Evaluate your intake workflow</p>
+<p class="body-text reveal">✓ Determine whether this system is a fit for your firm</p>
+<p class="body-text reveal">No pressure. No obligation.</p>
+</div>
+</section>
+
+<!-- SECTION 5: CTA -->
+  <section id="cta">
+    <div class="wrap">
+      <span class="section-label reveal">Next Step</span>
+      <div class="divider"></div>
+      <h2 class="reveal">Discover Whether We Can <em>Add 15 Qualified Consultations</em> To Your Calendar</h2>
+      <p class="body-text reveal">Book a free <span class="hl">20-minute discovery call</span>. We will review your current intake process, understand your case types, and confirm this is the right fit. If it is, <span class="hl">we start building within 48 hours</span>.</p>
+      <a href="https://calendly.com/abubakar-growthpartners/30min" target="_blank" class="cta-btn reveal">Book Now</a>
+      <p class="fine-print reveal">No long-term contracts. No upfront retainers. <span class="hl">If we don't deliver, we work for free.</span></p>
+    </div>
+  </section>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
